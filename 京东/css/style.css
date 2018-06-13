@@ -1,0 +1,1250 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*-清处内部白色边-*/
+}
+body{
+    font-size: 12px;
+    background: #fff;
+}
+
+/*-------------京东 - 首页样式--------------------*/
+/*--底部导航 样式---*/
+
+nav{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background: #fff;
+}
+nav li{
+    width: 20%;
+    list-style: none;
+    float: left;
+    text-align: center;
+}
+nav a:hover{
+    color: #f23030;
+}
+nav ul::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+nav ul{
+    border-top: 1px solid #cbcbcb;
+    padding-top: 20px;
+}
+nav .active{
+    color: #f23030;
+}
+nav a{
+    color: #5d5f6a;
+    text-decoration: none;
+}
+nav span{
+    font-size: 12px;
+    display: block;
+}
+
+nav .fa{
+    font-size: 24px;
+    margin-bottom: 5px;
+    position: relative;
+}
+nav .hot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #f23030;
+    display: block;
+    position: absolute;
+    right: -8px;
+    top: -1px;
+}
+
+
+
+/*close 点击关闭样式*/
+#ad::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+#ad div{
+    text-align: center;
+    float: left;
+    padding: 15px 0;
+}
+#ad a{
+    color: #fff;
+}
+#ad{
+    color: #fff;
+    font-size: 14px;
+}
+#ad div:nth-of-type(1){
+    width: 70%;
+    background: #000;
+}
+#ad div:nth-of-type(2){
+    width: 30%;
+    background: red;
+}
+
+
+
+/*--搜索框 样式---*/
+.search{
+    position: fixed;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    z-index: 100;
+    transition: 1s;
+}
+.search .left,.search .right{
+    width: 20%;
+    text-align: center;
+    color: #fff;
+}
+.search .center{
+    width: 60%;
+    position: relative;
+}
+.search:after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.search .left,.search .right,.search .center{
+    float: left;
+}
+
+.search .left span,.search .right span{
+    display: block;
+    font-size: 12px;
+}
+.search .left i,.search .right i{
+    font-size: 24px;
+}
+.search input{
+    width: 100%;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    padding: 0 36px;
+    background: #f0f2f5;
+}
+.search .center i{
+    position: absolute;
+    left: 0;
+    top: 8px;
+    color: #9b9b9b;
+    font-size: 20px;
+}
+.search .center i.fa-search{
+    left: 11px;
+}
+.search .center i.fa-microphone{
+    left: auto;
+    right: 12px;
+}
+
+
+
+
+/*---swiper样式--*/
+.banner{
+    width: 100%;
+}
+.banner img{
+    width: 100%;
+    height: 200px;
+}
+/*--小圆点设置---*/
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 2px;
+    display: inline-block;
+    background: #fff;
+    opacity: 0.5;
+    border-radius:0;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: transparent;
+    border-radius: 100%;
+    border:2px solid #fff;
+    width: 10px;
+    height: 10px;
+    position: relative;
+    top: 4px;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets{
+    bottom: 22px;
+    left: 0;
+    width: 100%;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 2px;
+}
+
+
+/*--APP 样式---*/
+
+.app{
+    position: relative;
+    margin-top: -10px;
+    border-radius: 10px 10px 0 0;
+    background: #fff;
+    z-index: 10;
+}
+.app img{
+    width: 100%;
+    padding: 7px;
+}
+.app .nav {
+    width: 20%;
+}
+.nav a{
+    color: #9a9c9e;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+}
+
+.app:after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.app > div{
+    float: left;
+}
+
+
+
+/*京东快报 样式*/
+.news {
+    margin: 10px 5px 10px 5px;
+    background: #fff;
+    border-radius: 10px;
+}
+.news::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.news .left,.news .center,.news .right{
+    float: left;
+}
+.news left{
+    width: 20%;
+}
+.news .right{
+    width: 20%;
+    float: right;
+}
+.news .right a{
+    float: right;
+}
+.news .center{
+    width: 60%;
+}
+.news a{
+    text-decoration: none;
+}
+.news .center em{
+    color: red;
+    margin: 5px;
+    font-style: inherit/*-清除字体倾斜-*/
+}
+.news .center a,.news .right a{
+    color: #4c4c4c;
+}
+.news .center,.news .center a {
+    color: #cc00ff;
+    display: block;
+    height: 16px;
+    text-overflow: ellipsis;/*-超出部分内容显示省略号-*/
+    white-space: nowrap;/*-超出部分内容显示省略号-*/
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+/*--京东秒杀 样式---*/
+
+.miaosha {
+    margin-left: 10px;
+}
+.miaosha .tit{
+    color: #f02c2c;
+    font-size: 15px;
+    font-family: 黑体;
+    font-weight: bold;
+}
+.miaosha .time{
+    font-size: 10px;
+    font-weight: bold;
+}
+.miaosha .jian a{
+    color: #f02c2c;
+    text-decoration: none;
+    font-weight: bold;
+}
+.miaosha .miao{
+    float: left;
+}
+.miaosha .jian{
+    position: relative;
+    top: 9px;
+    right: 10px;
+    float: right;
+}
+.miaosha .top::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.miaosha .tim{
+    background: #000;
+    border-radius: 3px;
+    color: #fff;
+    padding: 0 1px;
+    display: inline-block;/*-在内部设置转化成块元素-*/
+}
+.miaosha .top .miao{
+    background-image: url(../img/miaosha/miaosha-bg.jpg);
+    height: 32px;
+    width: 67%;
+    padding: 5px 0;
+    display: inline-block;
+    background-size: cover;/*-背景大小正常比例扩大 或 缩小-*/
+}
+.miaosha .miao .nao{
+    width: 15px;
+    height: 15px;
+}
+
+
+
+.miaosha .bottom del{
+    color: #ababab;
+    font-size: 12px;
+}
+.miaosha .bottom a{
+    color: #f62d2d;
+    text-decoration: none;
+    text-align: center;
+}
+.miaosha .bottom ul li{
+    float: left;
+    list-style: none;
+    width: 70px;
+}
+.miaosha .bottom ul{
+    width: 700px;
+}
+.miaosha .bottom ul li img{
+    width: 100%;
+}
+.miaosha .bottom{
+    overflow: scroll;/*-显示滚动条-*/
+}
+.miaosha .bottom ul::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.miaosha .bottom ul li p{
+    font-size: 14px;
+}
+
+
+
+.miaosha .bottom  ul li{
+    position: relative;
+}
+.miaosha .bottom i{
+    background-size: cover;
+    width: 38px;
+    height: 14px;
+    display: inline-block;
+    position: absolute;
+    top: 51px;
+    left: 16px;
+}
+.miaosha .bottom .hot{
+    background-image: url(../img/miaosha/remai.png);
+}
+.miaosha .bottom .tuijian{
+    background-image: url(../img/miaosha/tuijian.png);
+}
+
+
+
+
+/*----发现好货 样式----*/
+
+.faxian h3{
+    font-size: 16px;
+    font-weight: bold;
+}
+.faxian img{
+    width: 100%;
+    padding-bottom: 10px;
+}
+.faxian .col-xs-6{
+    padding-left: 3px;
+    padding-right: 3px;
+    position: inherit;
+    min-height: 0px;
+}
+.faxian .row{
+    margin-left: -3px;
+    margin-right: -3px;
+}
+.faxian .container {
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/*----发现好货 字体颜色样式----*/
+.faxian .z1 h3{
+    color: #0abcb9;
+}
+.faxian .z2 h3{
+    color: #ff481c;
+}
+.faxian .z3 h3{
+    color: #ffc54b;
+}
+.faxian .z4 h3{
+    color: #ff0011;
+}
+.faxian .z5 h3{
+    color: #dc1ce8;
+}
+.faxian .z6 h3{
+    color: #ff1d38;
+}
+
+
+/*----发现好货 边的样式----*/
+.faxian .q1{
+    border-top: 1px solid #ebebeb;
+}
+.faxian .q2{
+    border-bottom: 1px solid #ebebeb;
+}
+.faxian .q3{
+    border-right: 1px solid #ebebeb;
+}
+
+
+/*----爱生活-----*/
+.aishenghuo .to{
+    text-align: center;
+    margin-top: 20px;
+}
+.aishenghuo .ai-bg{
+    background-image: url(../img/aishenghuo/aishenghuo-bg.png);
+    display: inline-block;
+    width: 150px;
+    height: 24px;
+    color: #ee5675;
+    font-size: 20px;
+    font-weight: bold;
+    background-size: cover;
+}
+.aishenghuo .container{
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.aishenghuo img{
+    width: 100%;
+}
+.aishenghuo h3{
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.aishenghuo p{
+    font-size: 12px;
+    color: #ff8484;
+}
+.aishenghuo .w1{
+    margin-left: -3px;
+    margin-right: -3px;
+}
+.aishenghuo .q1{
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.aishenghuo .w2{
+    margin-left: -3px;
+    margin-right: -3px;
+}
+.aishenghuo .q2{
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+/*
+.aishenghuo .btn1{
+    position: relative;
+}
+.aishenghuo .btn1 .wuyi{
+    position: absolute;
+    top: 65px;
+    left: -10px;
+}
+*/
+
+
+.aishenghuo .wanmeibtn{
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 54px;
+    height: 13px;
+}
+.aishenghuo .btn2{
+    position: relative;
+}
+
+
+
+.aishenghuo .btn3{
+    position: relative;
+}
+.aishenghuo .yangpi{
+    position: absolute;
+    top: 123px;
+    left: 0;
+    width: 45px;
+}
+
+
+/*----品质时尚-----*/
+
+.pinzhi .pin{
+    text-align: center;
+    margin-top: 20px;
+}
+.pinzhi .ai-bg{
+    font-size: 20px;
+    background-image: url(../img/pinzhishishang/pinzhi-bg.png);
+    display: inline-block;
+    width: 160px;
+    height: 25px;
+    color: #d54da5;
+    background-size: cover;
+    font-weight: bold;
+}
+.pinzhi img{
+    width: 100%;
+}
+.pinzhi h3{
+    font-size: 15px;
+    font-weight: bold;
+}
+.pinzhi p{
+    color: #e290ea;
+    height: 25px;
+}
+.pinzhi .container{
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.pinzhi .p1{
+    margin-left: -3px;
+    margin-right: -3px;
+}
+.pinzhi .p2{
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.pinzhi .p3{
+    margin-left: -3px;
+    margin-right: -3px;
+}
+.pinzhi .p4{
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+
+.pinzhi .pbtn1{
+    position: relative;
+}
+.pinzhi .pin1{
+    position: absolute;
+    top: 63px;
+    left: 0;
+    width: 63px;
+    height: 15px;
+}
+.pinzhi .pbtn2{
+    position: relative;
+}
+.pinzhi .pin2{
+    position: absolute;
+    top: 63px;
+    left: 0;
+    width: 63px;
+    height: 15px;
+}
+.pinzhi .pbtn3{
+    position: relative;
+}
+.pinzhi .pin3{
+    position: absolute;
+    top: 143px;
+    left: 0;
+    width: 45px;
+    height: 15px;
+}
+
+
+/*---特色推荐部分样式----*/
+.tese .te{
+    text-align: center;
+    margin-top: 30px;
+}
+.tese .ai-bg{
+    font-size: 20px;
+    background-image: url(../img/tesetuijian/tese-bg.png);
+    display: inline-block;
+    width: 160px;
+    height: 25px;
+    color: #6176d9;
+    background-size: cover;
+    font-weight: bold;
+}
+.tese h3{
+    font-size: 15px;
+    font-weight: bold;
+}
+.tese p{
+    height: 22px;
+    color: #769bff;
+}
+.tese img{
+    width: 100%;
+}
+.tese .container{
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.tese .t1{
+    margin-left: -3px;
+    margin-right: -3px;
+}
+.tese .t2{
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.tese .t3{
+    margin-left: -3px;
+    margin-right: -3px;
+}
+.tese .t4{
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+
+/*---特色推荐部分  按钮的定位--*/
+.tese .mian{
+    position: relative;
+}
+.tese .mian1{
+    position: absolute;
+    top: 142px;
+    left: -4px;
+    width: 43px;
+    height: 14px;
+}
+
+
+.tese .yiyuan{
+    position: relative;
+}
+.tese .yi{
+    position: absolute;
+    top: 140px;
+    left: 2px;
+    width: 30px;
+    height: 15px;
+}
+
+
+.tese .er{
+    position: relative;
+}
+.tese .feng{
+    position: absolute;
+    top: 147px;
+    left: -2px;
+    height: 14px;
+    width: 47px;
+}
+
+
+
+
+/*------逛商场部分的样式--------*/
+.guangshangchang .guang{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 44px;
+}
+.guangshangchang .ai-bg{
+    font-size: 20px;
+    background-image: url(../img/guangshangchang/guang-bg.png);
+    display: inline-block;
+    width: 160px;
+    height: 25px;
+    color: #ee6467;
+    background-size: cover;
+    font-weight: bold; 
+}
+.guangshangchang .container{
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.guangshangchang img{
+    width: 100%;
+}
+.guangshangchang h3{
+    font-size: 15px;
+    font-weight: bold;
+}
+.guangshangchang p{
+    color: #ff6464;
+}
+
+
+
+.guangshangchang .gu{
+    margin-left: -3px;
+    margin-right: -3px;
+}
+.guangshangchang .ang{
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.guangshangchang .sh{
+    margin-left: -3px;
+    margin-right: -3px;
+}
+.guangshangchang .ch{
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+
+.guangshangchang .ga{
+    padding-bottom: 15px;
+}
+
+
+.guangshangchang .guang a{
+    color: #999999;
+    font-size: 15px;
+    float: right;
+    margin-top: 5px;
+}
+.guangshangchang .guang i{
+    color: #ff5f28;
+}
+.guangshangchang .guang::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+
+/*----东家小院部分样式----*/
+.dongjia .dong{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 72px;
+}
+.dongjia .dong a{
+    color: #999999;
+    font-size: 15px;
+    float: right;
+    margin-top: 5px;
+}
+.dongjia .dong i{
+    color: #e632b9;
+    margin-left: 5px;
+}
+.dongjia .ai-bg{
+    font-size: 20px;
+    background-image: url(../img/dongjiaxiaoyuan/dongjia-bg.png);
+    display: inline-block;
+    width: 160px;
+    height: 25px;
+    color: #cb28d6;
+    background-size: cover;
+    font-weight: bold; 
+}
+
+
+.dongjia .container{
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.dongjia h3{
+    font-size: 15px;
+    font-weight: bold;
+}
+.dongjia p{
+    color: #d663e1;
+}
+.dongjia img{
+    width: 100%;
+}
+
+
+.dongjia .do{
+    margin-left: -3px;
+    margin-right: -3px
+}
+.dongjia .doj{
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.dongjia .j1{
+    margin-left: -3px;
+    margin-right: -3px
+}
+.dongjia .j2{
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+
+.dongjia .tp h3,.dongjia .tp p{
+    text-align: center;
+}
+
+
+
+
+/*----发现好店 样式---*/
+.haodian h3{
+    font-size: 15px;
+    font-weight: bold;
+}
+.haodian p{
+    color: #648eff;
+}
+
+.haodian .container{
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.haodian .hao{
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 62px;
+}
+.haodian .hao a{
+    color: #999999;
+    font-size: 15px;
+    float: right;
+    margin-top: 5px;
+}
+.haodian .hao i{
+    color: #6e6fff;
+    margin-left: 5px;
+}
+.haodian .ai-bg{
+    font-size: 20px;
+    background-image: url(../img/faxianhaodian/haodian-bg.png);
+    display: inline-block;
+    width: 160px;
+    height: 25px;
+    color: #7868fe;
+    background-size: cover;
+    font-weight: bold; 
+}
+
+
+.haodian .o1{
+    margin-left: -3px;
+    margin-right: -3px
+}
+.haodian .o2{
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.haodian .o3{
+    margin-left: -3px;
+    margin-right: -3px
+}
+.haodian .o4{
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+
+.haodian img{
+    width: 100%;
+}
+
+.haodian .r1{
+    margin-bottom: 6px;
+}
+.haodian .r3 img{
+    width: 50px;
+    height: 26px;
+}
+.haodian .r3{
+    color: black;
+    font-size: 14px;
+}
+
+
+
+/*----优选清单 样式---*/
+.youxuan .container{
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.youxuan img{
+    width: 100%;
+}
+.youxuan h3{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.youxuan .you{
+    margin-left: 50px;
+    margin-top: 20px;
+    text-align: center;
+}
+.youxuan .you a{
+    color: #999999;
+    font-size: 15px;
+    float: right;
+    margin-top: 5px;
+}
+.youxuan .you i{
+    color: #ff505d;
+    margin-left: 5px;
+}
+.youxuan .ai-bg{
+    font-size: 20px;
+    background-image: url(../img/youxuanqingdan/youxuan-bg.png);
+    display: inline-block;
+    width: 160px;
+    height: 25px;
+    color: #e36a30;
+    background-size: cover;
+    font-weight: bold; 
+}
+
+
+.youxuan .xuan{
+    margin-left: -3px;
+    margin-right: -3px;
+}
+.youxuan .xuan1{
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.youxuan .pin{
+    color: #6b6b6b;
+}
+.youxuan .pin span{
+    color: #ed2b47;
+}
+
+
+/*---京东直播----*/
+.zhibo{
+    background-color: #a173a2;
+}
+.zhibo .zhi a{
+    color: #fff;
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+    font-size: 15px;
+}
+.zhibo .zhi::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.zhibo .zhi{
+    margin-top: 20px;
+    padding-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.zhibo i{
+    margin-left: 5px;
+}
+.zhibo .ai-bg{
+    font-size: 20px;
+    background-image: url(../img/jingdongzhibo/zhibo-bg.png);
+    display: inline-block;
+    width: 200px;
+    color: #fff;
+    background-size: cover;
+    font-weight: bold; 
+    margin-left: 35px;
+}
+.zhibo .bo{
+     width: 100%;
+}
+.zhibo .bo1 .swiper-slide{
+    background-position: center;
+    background-size: cover;
+    width: 260px;
+    height: 150px;
+}
+
+
+
+/*为你推荐  样式*/
+.jian1 #shop ul::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.jian1 #shop ul li{
+    width: 50%;
+    list-style: none;
+    float: left;
+}
+.jian1{
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+.jian1 img{
+    width: 100%;
+}
+
+
+.jian1 .tui1{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.jian1 .ai-bg{
+    font-size: 20px;
+    background-image: url(../img/weinituijian/weini-bg.png);
+    display: inline-block;
+    width: 211px;
+    color: #d666b3;
+    background-size: cover;
+    font-weight: bold; 
+}
+
+.jian1 h5{
+    height: 45px;
+    font-weight: bold;
+}
+.jian1 p{
+    color: #f23030;
+    font-size: 15px;
+}
+.jian1 .in::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.jian1 p,.jian1 .a,.jian1 spam,.jian1 h6{
+    float: left;
+}
+.jian1 .a{
+    float: right;
+    margin-right: 10px;
+    color: #686868;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+}
+.jian1 .span1{
+    color: #ddd480;
+    float: right;
+    margin-right: 10px;
+    background-color: #414141;
+}
+.jian1 h6{
+    margin-top: 6px;
+    color: #3c3c3f;
+    margin-left: 4px;
+}
+.jian1 .a1{
+    color: black;
+}
+.ziying{
+    background-image: url(../img/weinituijian/ziying.png);
+    width: 30px;
+    height: 15px;
+    display: inline-block;
+    background-size: cover;
+}
+.quanqiugou{
+    background-image: url(../img/weinituijian/quanqiugou.png);
+    width: 43px;
+    height: 15px;
+    display: inline-block;
+    background-size: cover;
+}
+
+
+
+/*回到顶部 样式*/
+#top{
+    background-image: url(../img/huidaodingbu/huidaodingbu.png);
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    display: inline-block;
+    position: fixed;
+    right: 15px;
+    bottom: 90px;
+    z-index: 10;
+    opacity: 0.8;
+}
+
+
+
+
+
+
+/*-------------京东分类页 样式--------------*/
+/*---  main 1-1部分的样式  --*/
+.main{
+    background: #fff;
+    padding-top: 66px;
+}
+.main li{
+    list-style: none;
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fff;
+}.main li:hover{
+    background: #fff;
+    color: red;
+}
+.main ul{
+    background: #f3f5f7;
+    overflow: scroll;
+    height: 500px;
+}
+/*.main ul::-webkit-scrollbar{
+    display: none;      //清除滚动条
+}*/
+.main ul::-webkit-scrollbar{
+    display: none;
+}
+.main .q1{
+    overflow: scroll;
+    height: 500px;
+}
+.main .active{
+    background: #fff;
+    color: red;
+}
+.main .container{
+    padding: 0;
+    margin: 0;
+}
+.main .row2{
+    margin: 0;
+}
+.main .col-xs-3{
+    text-align: center;
+    padding: 0;
+}
+.main .col-xs-9{
+    text-align: center;
+    padding: 8px;
+    padding-top: 13px;
+}
+.main .row1{
+    padding-left: 16px;
+    padding-right: 16px;
+    background: #f3f5f7;
+}
+.main .col-xs-4{
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.main .col-xs-9 h5{
+    text-align: left;
+    font-weight: bold;
+    font-size: 15px;
+}
+.main img{
+    width: 100%;
+}
+
+
+.sort .search{
+    border-bottom: 1px solid #cbcbcb;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
