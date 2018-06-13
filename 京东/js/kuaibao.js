@@ -122,18 +122,20 @@ window.onscroll = function(){
 //close 部分 点击消失事件
 var close = document.querySelector("#close");
 var ad = document.querySelector("#ad");
-
-if(sessionStorage.ad == "flose"){
+if(ad != null){
+    if(sessionStorage.ad == "flose"){
     ad.style.display = "none";
-}else{
+    }else{
     ad.style.display = "block";
+    }
 }
 
-close.onclick = function(){
-    ad.style.display = "none";
-    sessionStorage.ad = "flose";
+if(ad != null){
+    close.onclick = function(){
+        ad.style.display = "none";
+        sessionStorage.ad = "flose";
+    }
 }
-
 
 
 //----swiper轮播图效果-----
