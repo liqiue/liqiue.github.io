@@ -106,12 +106,14 @@ fnTimeCountDown(zxx.futureDate, zxx.obj());
 
 
 //.search 部分 滚动到一定高度显示背景色 样式 （否则无色）
-
+var search = document.querySelector(".search");
 window.onscroll = function(){
     if(document.body.scrollTop > 10){
         document.querySelector(".search").style.background="#82495c";
+        search.style.top = "0";
     }else{
         document.querySelector(".search").style.background="transparent";
+        search.style.top = "auto";
     }
 }
 
