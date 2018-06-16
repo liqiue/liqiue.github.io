@@ -5,7 +5,7 @@
 }
 body{
     font-size: 12px;
-    background:#fff;
+    background: #fff;
 }
 
 /*-------------京东 - 首页样式--------------------*/
@@ -1207,19 +1207,17 @@ nav .hot{
 }
 .main .col-xs-9{
     text-align: center;
-    padding: 8px;
-    padding-top: 13px;
+    margin-top: 15px;
 }
 .main .row1{
-    padding-left: 16px;
-    padding-right: 16px;
+    margin-left: 0px;
+    margin-right: 0px;
     background: #f3f5f7;
 }
 .main .col-xs-4{
     padding-left: 2px;
     padding-right: 2px;
 }
-
 .main .col-xs-9 h5{
     text-align: left;
     font-weight: bold;
@@ -1235,16 +1233,167 @@ nav .hot{
 }
 
 
+/*-------------觅 部分样式-----------------*/
+
+/*--  .mi 样式 ---*/
+.mimi{
+    background: #f3f3f3;
+}
+.mimi .search input{
+    width: 100%;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    padding: 0 45px;
+    font-size: 33px;
+    font-family: 宋体;
+    font-weight: bold;
+    background: #fff;
+}
+.main1-top {
+    overflow: scroll;
+    background: #fff;
+    border-bottom: 1px solid #d6d6d6;
+    margin-bottom: 10px;
+}
+.main1-top ul::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.main1-top ul{
+    width: 535px;
+    padding-top: 70px;
+    padding-bottom: 10px;
+    margin-left: 8px;
+}
+.main1-top .mohu{
+    position: fixed;
+    top: 58px;
+    right: 0px;
+}
+.main1-top .mohu i{
+    padding: 10px;
+    padding-right: 10px;
+    background: #fff;
+}
+.main1-top li{
+    float: left;
+    list-style: none;
+    font-weight: bold;
+    padding: 0 7px;
+    color: #8b8b8b;
+}
+.main1-top img{
+    width: 20px;
+    height: 50px;
+    margin-top: -10px;
+}
+
+
+
+.main-1-bottom img{
+    width: 100%;
+}
+.main-1-bottom span{
+    color: #989898;
+}
+.main-1-bottom .col-xs-5,.main-1-bottom .col-xs-7{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.main-1-bottom .col-xs-7 h3{
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 180%;
+    margin-top: 0px;
+    padding-bottom: 8px;
+}
+.main-1-bottom .row{
+    background: #fff;
+    border-top: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
+    margin-bottom: 10px;
+}
+.main-1-bottom .container{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+.main1-top .active{
+    color: red;
+    border-bottom: 2px solid red;
+}
+.main-1-bottom .btn{
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    border: 0;
+}
+.main1-top::-webkit-scrollbar{
+    display: none;
+}
+.main-1-bottom .col-xs-12{
+    padding: 0;
+}
 
 
 
 
+/*--------关注部分样式-------*/
+.guanzhu{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    height: 100px;
+    text-align: center;
+}
+.guanzhu h4{
+    color: #8e8e8e;
+    padding-bottom: 20px;
+}
+.guanzhu a{
+    color: #fff;
+    background: #f05656;
+    padding: 10px 80px;
+    font-size: 25px;
+}
 
 
-
-
-
-
+.guanzhu1{
+    margin-bottom: 100px;
+}
+.guanzhu1 img{
+    width: 80px;
+    height: 80px;
+}
+.guanzhu1 span{
+    color: #afafaf;
+}
+.guanzhu1 .a1{
+    color: #fff;
+    padding: 0 20px;
+    font-size: 30px;
+    background: red;
+}
+.guanzhu1 .row{
+    background: #fff;
+    margin-bottom: 10px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+.guanzhu1 .col-xs-6{
+    line-height: 10%;
+    margin-top: -18px;
+}
+.guanzhu1 .row h4{
+    color: #6a6a6a;
+}
+.he{
+    margin-bottom: 80px;
+}
 
 
 

@@ -108,7 +108,7 @@ fnTimeCountDown(zxx.futureDate, zxx.obj());
 //.search 部分 滚动到一定高度显示背景色 样式 （否则无色）
 var search = document.querySelector(".search");
 window.onscroll = function(){
-    if(document.body.scrollTop > 10){
+    if(document.body.scrollTop > 10 || document.documentElement.scrollTop>10){ //浏览器兼容
         document.querySelector(".search").style.background="#82495c";
         search.style.top = "0";
     }else{
@@ -136,6 +136,9 @@ if(ad != null){
         sessionStorage.ad = "flose";
     }
 }
+
+
+
 
 
 //----swiper轮播图效果-----
@@ -175,6 +178,7 @@ if(ad != null){
 
 
 /*------vue 效果-------*/
+/*-------为你推荐-------*/
 new Vue ({
     el:"#shop",
     data:{
@@ -254,7 +258,8 @@ new Vue ({
 //jq实现的反回顶部效果 并有显示隐藏效果
 $(function(){
     $("#top").click(function(){
-        $("body").animate({"scrollTop":"0px"},1500)
+        //浏览器兼容
+        $("body,html").animate({"scrollTop":"0px"},1500)
     });
     $("#top").hide();
     $(window).scroll(function(){
@@ -297,7 +302,6 @@ $(function(){
         $(".tab_menu li").eq(0).addClass("selected")
         $(".tab_menu li").click(function(){   
             var n=$(this).index();
-            //alert(n);
             $(this).addClass("selected").siblings("li").removeClass("selected");
             
             $(".tab_box>div").eq(n).show().siblings("div").hide();
@@ -334,6 +338,85 @@ $(function(){
 //    }
 //}
 
+
+
+
+
+/*------------  觅 部分的 vue---------------*/
+
+new Vue ({
+    el:"#mi1",
+    data:{
+        mis:[
+            {h3:"打破黑白灰的沉闷感，你只差一只红色包包",span:"米拉搭配 · 1133人阅读",img1:"img/mi/1.jpg",btn:"img/mi/btn.jpg"},
+            {h3:"儒雅汉文化加持，舒适中国风棉麻衬衫",span:"型男衣品sh... · 714人阅读",img1:"img/mi/2.jpg",btn:"img/mi/btn2.jpg"},
+            {h3:"老款功放机如何加装无线蓝牙功能？",span:"时尚数码评测 · 2026人阅读",img1:"img/mi/3.jpg",btn:"img/mi/btn3.jpg"},
+            {h3:"百公里油耗1.6L？这地球上竟有这么省油的车！",span:"邱小铖 · 2740人阅读",img1:"img/mi/4.jpg",btn:"img/mi/btn4.jpg"}
+        ],
+        mism:[
+            {i:"img/mi/datu.png",h4:"毛多还有狐臭怎么办",m:"img/mi/btn.jpg",sp:"大兔子 · 太原"},
+        ],
+        miss:[
+            {h3:"打破黑白灰的沉闷感，你只差一只红色包包",span:"米拉搭配 · 1133人阅读",img1:"img/mi/1.jpg",btn:"img/mi/btn.jpg"},
+            {h3:"儒雅汉文化加持，舒适中国风棉麻衬衫",span:"型男衣品sh... · 714人阅读",img1:"img/mi/2.jpg",btn:"img/mi/btn2.jpg"},
+            {h3:"老款功放机如何加装无线蓝牙功能？",span:"时尚数码评测 · 2026人阅读",img1:"img/mi/3.jpg",btn:"img/mi/btn3.jpg"},
+            {h3:"百公里油耗1.6L？这地球上竟有这么省油的车！",span:"邱小铖 · 2740人阅读",img1:"img/mi/4.jpg",btn:"img/mi/btn4.jpg"}
+        ],
+        misms:[
+            {i:"img/mi/datu1.png",h4:"畅爽夏日，买个车载冰箱到底值不值？",m:"img/mi/btn.jpg",sp:"京东问答，0次观看"},
+        ],
+    }
+})
+
+
+
+
+
+
+
+new Vue ({
+    el:"#guan",
+    data:{
+        guans:[
+            {img:"img/mi/guanzhu1.png",h3:"Becks",span:"粉丝数3024 · 发布871篇",h5:"04月15日更新《OPP商务皮鞋》",jia:"+"},
+            {img:"img/mi/guanzhu1.png",h3:"Becks",span:"粉丝数3024 · 发布871篇",h5:"04月15日更新《OPP商务皮鞋》",jia:"+"},
+            {img:"img/mi/guanzhu1.png",h3:"Becks",span:"粉丝数3024 · 发布871篇",h5:"04月15日更新《OPP商务皮鞋》",jia:"+"},
+            {img:"img/mi/guanzhu1.png",h3:"Becks",span:"粉丝数3024 · 发布871篇",h5:"04月15日更新《OPP商务皮鞋》",jia:"+"},
+            {img:"img/mi/guanzhu1.png",h3:"Becks",span:"粉丝数3024 · 发布871篇",h5:"04月15日更新《OPP商务皮鞋》",jia:"+"},
+            {img:"img/mi/guanzhu1.png",h3:"Becks",span:"粉丝数3024 · 发布871篇",h5:"04月15日更新《OPP商务皮鞋》",jia:"+"},
+        ]
+    }
+})
+
+
+
+
+
+/*----觅 部分的选项卡---*/
+
+var main1 =document.querySelectorAll(".main1 ul .gt");
+console.log(main1)
+var he =document.querySelectorAll(".main1 .he");
+console.log(he);
+for(var a=0;a<he.length;a++){
+    he[a].style.display="none";
+    he[0].style.display="block";
+    main1[0].style.color="red";
+}
+for(var o=0;o<main1.length;o++){
+    main1[o].name=o;
+    main1[o].onclick=function(){
+        console.log(o);
+        for(var p=0;p<he.length;p++){
+            he[p].style.display="none";
+            main1[p].style.border="none";
+            main1[p].style.color="#8b8b8b";
+        }
+        he[this.name].style.display="block";
+        main1[this.name].style.borderBottom="2px solid red";
+        this.style.color="red";
+    }
+}
 
 
 
