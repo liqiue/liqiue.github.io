@@ -226,10 +226,32 @@ var li1 = document.querySelectorAll(".yanzheng a");
 
 
 
+//close 红包弹出框部分 点击消失事件
+var close = document.querySelector("#close");
+var ad = document.querySelector("#ad");
+var div4 = document.querySelector("#ad .div4");
+var x = document.querySelector("#ad .x");
+if(ad != null){
+        div4.onclick = function(){
+        div4.style.display = "none";
+        close.style.display = "block";
+    }
+    x.onclick = function(){
+        ad.style.display = "none";
+        sessionStorage.ad = "true";
+    }
+    close.onclick = function(){
+        ad.style.display = "none";
+    }
 
-
-
-
+}
+if(ad != null){
+    if(sessionStorage.ad == "true"){
+    ad.style.display = "none";
+    }else{
+    ad.style.display = "block";
+    }
+}
 
 
 
