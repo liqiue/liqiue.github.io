@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>折800 - 购物车页</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-3.3.4-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-4.2.6.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="gouwuche">
+<!-- 购物车页-->
+<!---- top 部分--->
+<div class="sou container">
+    <a href="index.html"><i class="fa fa-angle-left"></i></a>
+</div>
+
+
+    
+    
+<!-- 验证-->
+    <div class="yanzheng">
+        <ul class="ul1">
+            <li><a href="#">短信验证登录</a></li>
+        </ul>
+        <ul class="ul2">
+            <li><a href="#">账号密码登录</a></li>
+        </ul>
+    </div>
+    
+    
+<!--  登录 界面-->
+    <div class="deng container">
+        <ul class="ul1">
+            <li><i class="fa fa-user"></i><input type="text" placeholder="手机号"></li>
+        </ul>
+        <ul class="ul2">
+            <li><i class="fa fa-expeditedssl"></i><input type="text" placeholder="动态验证码"></li>
+            <li>获取验证码</li>
+        </ul>
+        <ul class="ul3">
+            <li>登录</li>
+        </ul>
+        <ul class="ul4">
+            <li>收不到短信？使用<span>语音验证码</span></li>
+        </ul>
+        <ul class="ul5">
+            <li>—————其他账号直接登录—————</li>
+            <i class="fa fa-qq"></i>
+        </ul>
+    </div>
+    
+    
+  <!-- 为你推荐-->
+    <div class="temai container" id="mai">
+        <p class="p1">————为你推荐————</p>
+        <div class="row">
+            <div class="col-xs-6 o1" v-for="arr in arrs">
+                <a href="#">
+                    <img :src="arr.img1" alt="">
+                </a>
+                <p>{{arr.p1}}</p>
+                <h5>{{arr.h51}}</h5>
+            </div>
+        </div>
+    </div>  
+    
+    
+    
+<div id="top2"></div>
+<div id="temai"></div>
+<!-- 回到顶部 部分-->
+<div id="top"></div>
+    
+<script src="js/vue.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/swiper-4.2.6.min(1).js"></script>
+<script src="js/zhe.js"></script>    
+</body>
+</html>

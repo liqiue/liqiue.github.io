@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>折800 - 我的</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-3.3.4-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-4.2.6.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="mi">
+<!--我的页-->
+<!--   底部导航 部分-->
+    <nav>
+         <ul>
+             <li><a href="index.html"><i class="fa fa-home"></i><span>今日特卖</span></a></li>
+             <li><a href="fenlei.html"><i class="fa fa-list-ul"></i><span>分类</span></a></li>
+             <li><a href="gou.html"><i class="fa fa-shopping-cart"></i><span>购物车</span></a></li>
+             <li><a href="mi.html" class="active"><i class="fa fa-user-o"></i><span>我的</span></a></li>
+         </ul>
+     </nav> 
+     
+
+
+<!-- 中心 部分-->
+    <div class="zhong container">
+        <a href="index.html"><i class="fa fa-angle-left"></i></a>
+        <p class="text-center">个人中心</p>
+        <ul>
+            <li><a href="#">登录</a></li>
+            <li><a href="#">|</a></li>
+            <li><a href="#">注册</a></li>
+        </ul>
+    </div>
+<div class="mian">
+    <ul class="ul1 container">
+        <li><a href="#">我的订单</a></li>
+        <li><a href="#">查看全部 ></a></li>
+    </ul>
+    <ul class="ul2">
+        <li><img src="img/mi/1.png" alt=""><p><a href="#">待付款</a></p></li>
+        <li><img src="img/mi/2.png" alt=""><p><a href="#">待发货</a></p></li>
+        <li><img src="img/mi/3.png" alt=""><p><a href="#">待收货</a></p></li>
+        <li><img src="img/mi/4.png" alt=""><p><a href="#">待评价</a></p></li>
+        <li><img src="img/mi/5.png" alt=""><p><a href="#">退款/售后</a></p></li>
+    </ul>
+    <div class="row container">
+        <div class="col-xs-12">
+            <ul class="ul3">
+                <li><a href="#">购物车</a></li>
+                <li>></li>
+            </ul>
+            <ul class="ul4">
+                <li><a href="#">优惠券</a></li>
+                <li>></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row container">
+        <div class="col-xs-12">
+            <ul class="ul3">
+                <li><a href="#">收藏夹</a></li>
+                <li>></li>
+            </ul>
+            <ul class="ul4">
+                <li><a href="#">足迹</a></li>
+                <li>></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row container">
+        <div class="col-xs-12">
+            <ul class="ul3">
+                <li><a href="#">帮助与客服</a></li>
+                <li>></li>
+            </ul>
+            <ul class="ul4">
+                <li><a href="#">下载折800APP</a></li>
+                <li>></li>
+            </ul>
+        </div>
+    </div>
+</div>    
+    
+    
+<!-- 为你推荐-->
+    <div class="temai container" id="mai">
+        <p class="p1">————为你推荐————</p>
+        <div class="row">
+            <div class="col-xs-6 o1" v-for="arr in arrs">
+                <a href="#">
+                    <img :src="arr.img1" alt="">
+                </a>
+                <p>{{arr.p1}}</p>
+                <h5>{{arr.h51}}</h5>
+            </div>
+        </div>
+    </div>    
+    
+    
+    
+<div id="top2"></div>
+<div id="temai"></div>
+<!-- 回到顶部 部分-->
+<div id="top"></div>
+    
+<script src="js/vue.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/swiper-4.2.6.min(1).js"></script>
+<script src="js/zhe.js"></script>    
+</body>
+</html>
